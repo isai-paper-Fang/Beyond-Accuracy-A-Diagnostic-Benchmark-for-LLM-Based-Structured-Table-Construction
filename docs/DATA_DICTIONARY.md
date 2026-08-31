@@ -51,7 +51,7 @@ Not every column applies to every condition; unused cells are empty.
 
 ## `data/raw/R###_<Model>_<Task>_rep<N>.txt` — 54 files
 
-The verbatim response of each run: 3 systems × 6 tests × 3 sentence forms. A fourth system was dropped before analysis and is not part of this release (`docs/COLLECTION_PROTOCOL.md`). Nothing has been edited — the files include the free-text reasoning that preceded the JSON block.
+The verbatim response of each run: 3 systems × 6 tests × 3 sentence forms. **These files are not under CC BY 4.0** — see `LICENSE`. You may read, redistribute and analyse them; you may not use them to train or develop a model. A fourth system was dropped before analysis and is not part of this release (`docs/COLLECTION_PROTOCOL.md`). Nothing has been edited — the files include the free-text reasoning that preceded the JSON block.
 
 ## `data/scores_cells.csv` — 81,729 rows
 

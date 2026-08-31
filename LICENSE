@@ -26,17 +26,60 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ────────────────────────────────────────────────────────────────────
-DATA — Creative Commons Attribution 4.0 International (CC BY 4.0)
-Applies to: everything under data/
+DATA WE CREATED — Creative Commons Attribution 4.0 International (CC BY 4.0)
+Applies to: everything under data/ EXCEPT data/raw/
 ────────────────────────────────────────────────────────────────────
 
 https://creativecommons.org/licenses/by/4.0/
 
 The corpus is entirely synthetic. It contains no real government documents,
 no real agency records, and no personal data. Agency names, activity codes,
-and figures were generated from a fixed lexicon with seed 20260815.
+and figures were generated from a fixed lexicon with seed 20260815. Some
+place names used in the lexicon are real Thai subdistrict names; no real
+organisation's records, and no individual person, is represented.
 
-The files under data/raw/ are verbatim responses produced by third-party
-commercial LLM services in August 2026. They are redistributed here for
-verification. Their status under those services' terms is the redistributor's
-responsibility to confirm before publication.
+────────────────────────────────────────────────────────────────────
+MODEL OUTPUTS — data/raw/ only
+────────────────────────────────────────────────────────────────────
+
+The 54 files under data/raw/ are verbatim responses produced by three
+third-party commercial LLM services in August 2026. They are published here
+so that the scoring can be checked without re-running any model.
+
+We are not able to place these files under CC BY 4.0, because CC BY 4.0
+grants downstream users rights we do not hold. All three providers assign
+output ownership to the user, or do not claim it, so publishing the files is
+permitted; but all three also restrict one specific downstream use, and that
+restriction travels with the files:
+
+  OpenAI    "Use Output to develop models that compete with OpenAI" is
+            prohibited.  (Terms of Use, "What you cannot do")
+  Anthropic Using the Services "to develop any products or services that
+            compete with our Services, including to develop or train any
+            artificial intelligence or machine learning algorithms or
+            models" is prohibited.  (Consumer Terms of Service)
+  Google    "using AI-generated content from our services to develop
+            machine learning models or related AI technology" is
+            prohibited.  (Google Terms of Service, "Abusing our services")
+
+Accordingly, data/raw/ is published under these conditions:
+
+  1. You may read, quote, redistribute and analyse these files, including
+     for research and for verifying the results in the paper, with
+     attribution.
+  2. You may NOT use them to train, fine-tune, distil, evaluate-for-training
+     or otherwise develop any machine learning model or related AI
+     technology.
+  3. You may not present their content as human-written.
+  4. Google's restriction is the broadest of the three and is not limited to
+     competing models. If you are unsure which file came from which service,
+     the model is named in every filename and in run_log.csv.
+
+Condition 2 is a restriction of the providers, not of ours. Nothing here
+grants you rights against those providers' terms; check them yourself
+before any use beyond reading and verification.
+
+Terms consulted, August 2026:
+  https://openai.com/policies/row-terms-of-use/
+  https://www.anthropic.com/legal/consumer-terms
+  https://policies.google.com/terms

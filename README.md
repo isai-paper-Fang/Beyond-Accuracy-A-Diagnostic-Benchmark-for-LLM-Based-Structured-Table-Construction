@@ -98,7 +98,9 @@ The raw outputs in `data/raw/` came from web interfaces, not APIs. `docs/COLLECT
 
 ## Licence
 
-Code (`*.py`, `*.yaml`, `*.sh`): MIT. Data (`data/`): CC BY 4.0. See `LICENSE`.
+Code (`*.py`, `*.yaml`, `*.sh`) and `docs/`: MIT. Everything under `data/` **except** `data/raw/`: CC BY 4.0.
+
+`data/raw/` is different, and the difference matters. Those 54 files are verbatim output from three commercial LLM services. All three providers let you own and publish the output, so the files are here; but all three also forbid using model output to develop machine learning models, and Google's wording is not limited to competing models. `data/raw/` is therefore **not** CC BY 4.0: you may read, redistribute and analyse it with attribution, but you may not use it to train or develop any model. `LICENSE` quotes each provider's clause and links the terms we consulted.
 
 ## Citation
 

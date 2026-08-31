@@ -5,7 +5,7 @@ type: dataset
 authors:
   - name: "Anonymous during review"
 license: "MIT AND CC-BY-4.0"
-repository-code: "https://github.com/REPLACE-ME/llm-table-diagnostics"
+repository-code: "https://github.com/isai-paper-Fang/Beyond-Accuracy-A-Diagnostic-Benchmark-for-LLM-Based-Structured-Table-Construction"
 keywords:
   - diagnostic evaluation
   - structured table construction

@@ -1,0 +1,16 @@
+The 54 .txt files in this directory are verbatim output from three commercial
+LLM services (ChatGPT, Claude, Gemini), collected through their web interfaces
+in August 2026.
+
+They are NOT covered by the CC BY 4.0 licence that applies to the rest of
+data/. See the "MODEL OUTPUTS" section of ../../LICENSE for the full terms.
+
+In short:
+  YES   read, quote, redistribute, analyse, verify the paper's results,
+        with attribution
+  NO    train, fine-tune, distil, or otherwise develop any machine learning
+        model or related AI technology from them
+  NO    present their content as human-written
+
+The model that produced each file is named in the filename and in
+../../run_log.csv.
