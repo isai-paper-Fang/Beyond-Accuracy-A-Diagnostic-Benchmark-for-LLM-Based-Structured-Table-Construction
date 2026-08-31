@@ -1,0 +1,2370 @@
+วิธีคิดของงานนี้คือการรวบรวมข้อมูลผลการดำเนินงานของหน่วยงานราชการจากเอกสารทั้งหมด (รหัสเอกสาร D034 ถึง D066) โดยดึงข้อมูลกิจกรรมแต่ละรายการ ประกอบด้วย รหัสเอกสาร รหัสกิจกรรม เหตุผล (จากช่องหมายเหตุหรือหากไม่มีให้ระบุว่าไม่มีข้อมูลตามเงื่อนไข แต่ในตารางข้อมูลช่องหมายเหตุของกิจกรรมส่วนใหญ่ว่างไว้จึงระบุว่าไม่มีข้อมูล) หน่วยงานรับผิดชอบ งบจัดสรร (บาท) และเบิกจ่าย (บาท) โดยแปลงหน่วยตัวเลขให้เป็นบาททั้งหมด (เช่น หน่วยพันบาทในบางเอกสารต้องคูณ 1,000 ก่อน) จากนั้นจึงทำการประมวลผลสรุปในแต่ละเอกสาร ได้แก่ จำนวนกิจกรรม ยอดงบประมาณที่ใช้จ่ายจริงรวม (ยอดเบิกจ่ายรวมเป็นบาท) และคำนวณสัดส่วนร้อยละของยอดเบิกจ่ายแต่ละหน่วยงานเทียบกับยอดเบิกจ่ายรวมทั้งหมดในเอกสารนั้น ๆ โดยแสดงตัวเลขเป็นเลขอารบิกและไม่มีเครื่องหมายคั่นหลักพันตามข้อกำหนด
+
+{
+  "documents": [
+    {
+      "document_id": "D034",
+      "total_activities": 9,
+      "total_actual_spending": 1792000,
+      "agency_spending_percentages": {
+        "อบต.ท่าข้าม": 44.25223214285714,
+        "องค์การบริหารส่วนตำบลท่าข้าม": 55.747767857142854
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สธ-736",
+          "responsible_agency": "อบต.ท่าข้าม",
+          "allocated_budget": 111500,
+          "disbursed_budget": 94000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-ศษ-878",
+          "responsible_agency": "อบต.ท่าข้าม",
+          "allocated_budget": 186500,
+          "disbursed_budget": 165500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สธ-021",
+          "responsible_agency": "องค์การบริหารส่วนตำบลท่าข้าม",
+          "allocated_budget": 833500,
+          "disbursed_budget": 513000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สค-813",
+          "responsible_agency": "อบต.ท่าข้าม",
+          "allocated_budget": 206500,
+          "disbursed_budget": 189500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สค-308",
+          "responsible_agency": "อบต.ท่าข้าม",
+          "allocated_budget": 27500,
+          "disbursed_budget": 27000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-พช-708",
+          "responsible_agency": "อบต.ท่าข้าม",
+          "allocated_budget": 413000,
+          "disbursed_budget": 330000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สค-728",
+          "responsible_agency": "องค์การบริหารส่วนตำบลท่าข้าม",
+          "allocated_budget": 111500,
+          "disbursed_budget": 94000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สค-683",
+          "responsible_agency": "องค์การบริหารส่วนตำบลท่าข้าม",
+          "allocated_budget": 181000,
+          "disbursed_budget": 113500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D034",
+          "activity_id": "2568-สธ-762",
+          "responsible_agency": "องค์การบริหารส่วนตำบลท่าข้าม",
+          "allocated_budget": 126500,
+          "disbursed_budget": 79000
+        }
+      ]
+    },
+    {
+      "document_id": "D035",
+      "total_activities": 8,
+      "total_actual_spending": 2803500,
+      "agency_spending_percentages": {
+        "ปศอ.วังน้ำเขียว": 42.6609595148921,
+        "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว": 57.3390404851079
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-พช-909",
+          "responsible_agency": "ปศอ.วังน้ำเขียว",
+          "allocated_budget": 799000,
+          "disbursed_budget": 566000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-สธ-142",
+          "responsible_agency": "ปศอ.วังน้ำเขียว",
+          "allocated_budget": 392500,
+          "disbursed_budget": 330500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-สธ-096",
+          "responsible_agency": "ปศอ.วังน้ำเขียว",
+          "allocated_budget": 480500,
+          "disbursed_budget": 294000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-กษ-382",
+          "responsible_agency": "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว",
+          "allocated_budget": 639000,
+          "disbursed_budget": 365500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-พช-460",
+          "responsible_agency": "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว",
+          "allocated_budget": 236500,
+          "disbursed_budget": 215000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-ศษ-466",
+          "responsible_agency": "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว",
+          "allocated_budget": 34500,
+          "disbursed_budget": 33000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-ศษ-184",
+          "responsible_agency": "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว",
+          "allocated_budget": 799000,
+          "disbursed_budget": 566000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D035",
+          "activity_id": "2567-ศษ-362",
+          "responsible_agency": "สำนักงานปศุสัตว์อำเภอวังน้ำเขียว",
+          "allocated_budget": 559000,
+          "disbursed_budget": 396000
+        }
+      ]
+    },
+    {
+      "document_id": "D036",
+      "total_activities": 9,
+      "total_actual_spending": 2043500,
+      "agency_spending_percentages": {
+        "สนง.เกษตรอำเภอปาย": 41.52190362123562,
+        "สำนักงานเกษตรอำเภอปาย": 58.47809637876437,
+        "สนงเกษตรอำเภอปาย": 3.988255444090996
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-กษ-339",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 108500,
+          "disbursed_budget": 81500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-สค-475",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 361500,
+          "disbursed_budget": 355000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-สธ-381",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 506000,
+          "disbursed_budget": 499000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-ทถ-182",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 167000,
+          "disbursed_budget": 166000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-ทถ-629",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 706000,
+          "disbursed_budget": 462000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-ทถ-069",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 313000,
+          "disbursed_budget": 257500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-ทถ-478",
+          "responsible_agency": "สนงเกษตรอำเภอปาย",
+          "allocated_budget": 108500,
+          "disbursed_budget": 81500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-ศษ-968",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 93500,
+          "disbursed_budget": 92500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D036",
+          "activity_id": "2567-สค-513",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 65000,
+          "disbursed_budget": 64500
+        }
+      ]
+    },
+    {
+      "document_id": "D037",
+      "total_activities": 8,
+      "total_actual_spending": 2562000,
+      "agency_spending_percentages": {
+        "สถจ.ชุมพร": 30.63973063973064,
+        "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร": 69.36026936026936
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-พช-388",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 143500,
+          "disbursed_budget": 114500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-ศษ-954",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 110000,
+          "disbursed_budget": 75000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-ทถ-472",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 621000,
+          "disbursed_budget": 587000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-กษ-714",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 369500,
+          "disbursed_budget": 315000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-พช-568",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 779000,
+          "disbursed_budget": 433000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-สธ-209",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 664500,
+          "disbursed_budget": 642500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-ทถ-281",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 143500,
+          "disbursed_budget": 114500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D037",
+          "activity_id": "2568-กษ-414",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 100000,
+          "disbursed_budget": 80000
+        }
+      ]
+    },
+    {
+      "document_id": "D038",
+      "total_activities": 8,
+      "total_actual_spending": 1827000,
+      "agency_spending_percentages": {
+        "กศน.อำเภอบ้านโป่ง": 58.07334427476738,
+        "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอบ้านโป่ง": 41.92665572523262
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-ศษ-271",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 358000,
+          "disbursed_budget": 210000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-ทถ-314",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 64000,
+          "disbursed_budget": 37500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-พช-135",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 346500,
+          "disbursed_budget": 206500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-พช-463",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 133500,
+          "disbursed_budget": 93500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-พช-779",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 567500,
+          "disbursed_budget": 386000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-พช-858",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 337500,
+          "disbursed_budget": 279500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-ศษ-206",
+          "responsible_agency": "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอบ้านโป่ง",
+          "allocated_budget": 358000,
+          "disbursed_budget": 210000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D038",
+          "activity_id": "2568-สธ-846",
+          "responsible_agency": "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอบ้านโป่ง",
+          "allocated_budget": 250500,
+          "disbursed_budget": 147000
+        }
+      ]
+    },
+    {
+      "document_id": "D039",
+      "total_activities": 9,
+      "total_actual_spending": 2242500,
+      "agency_spending_percentages": {
+        "สนง.เขตหนองแขม": 95.80824972131549,
+        "สำนักงานเขตหนองแขม": 4.191750278684504
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-พช-477",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 313000,
+          "disbursed_budget": 202000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-ศษ-864",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 213000,
+          "disbursed_budget": 121500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-พช-053",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 552500,
+          "disbursed_budget": 522500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-กษ-376",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 472500,
+          "disbursed_budget": 434500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-ทถ-597",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 411500,
+          "disbursed_budget": 259000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-ทถ-789",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 69000,
+          "disbursed_budget": 60000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-พช-952",
+          "responsible_agency": "สำนักงานเขตหนองแขม",
+          "allocated_budget": 114000,
+          "disbursed_budget": 94000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-ทถ-242",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 313000,
+          "disbursed_budget": 202000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D039",
+          "activity_id": "2567-พช-811",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 219000,
+          "disbursed_budget": 141000
+        }
+      ]
+    },
+    {
+      "document_id": "D040",
+      "total_activities": 8,
+      "total_actual_spending": 2908500,
+      "agency_spending_percentages": {
+        "สถจ.ชุมพร": 75.3309265944645,
+        "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร": 6.876396768093519,
+        "สถจ. ชุมพร": 17.79267663744198
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-ทถ-618",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 738000,
+          "disbursed_budget": 488000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-สค-207",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 228500,
+          "disbursed_budget": 200000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-ทถ-284",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 73500,
+          "disbursed_budget": 44000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-กษ-776",
+          "responsible_agency": "สำนักงานส่งเสริมการปกครองท้องถิ่นจังหวัดชุมพร",
+          "allocated_budget": 149000,
+          "disbursed_budget": 139000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-ศษ-687",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 716500,
+          "disbursed_budget": 706500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-ทถ-640",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 524000,
+          "disbursed_budget": 400500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-สธ-586",
+          "responsible_agency": "สถจ. ชุมพร",
+          "allocated_budget": 738000,
+          "disbursed_budget": 488000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D040",
+          "activity_id": "2567-ทถ-073",
+          "responsible_agency": "สถจ. ชุมพร",
+          "allocated_budget": 516500,
+          "disbursed_budget": 341500
+        }
+      ]
+    },
+    {
+      "document_id": "D041",
+      "total_activities": 9,
+      "total_actual_spending": 2728000,
+      "agency_spending_percentages": {
+        "พช.อ.ปากช่อง": 16.297654320987653,
+        "สำนักงานพัฒนาชุมชนอำเภอปากช่อง": 83.70234567901235
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-สธ-758",
+          "responsible_agency": "พช.อ.ปากช่อง",
+          "allocated_budget": 382500,
+          "disbursed_budget": 238000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-พช-973",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 677500,
+          "disbursed_budget": 542000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-พช-770",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 198500,
+          "disbursed_budget": 158000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-สธ-910",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 180500,
+          "disbursed_budget": 114500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-ศษ-313",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 672500,
+          "disbursed_budget": 393500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-ศษ-392",
+          "responsible_agency": "พช.อ.ปากช่อง",
+          "allocated_budget": 264500,
+          "disbursed_budget": 206500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-กษ-602",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 660500,
+          "disbursed_budget": 565000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-ทถ-272",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 382500,
+          "disbursed_budget": 238000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D041",
+          "activity_id": "2568-กษ-497",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอปากช่อง",
+          "allocated_budget": 267500,
+          "disbursed_budget": 166500
+        }
+      ]
+    },
+    {
+      "document_id": "D042",
+      "total_activities": 8,
+      "total_actual_spending": 1445000,
+      "agency_spending_percentages": {
+        "พมจ.สตูล": 75.25951557093425,
+        "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดสตูล": 24.740484429065742,
+        "พมจสตูล": 5.397923875432526
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-ทถ-465",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 73500,
+          "disbursed_budget": 46000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-กษ-617",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 176000,
+          "disbursed_budget": 165500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-สค-277",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 227500,
+          "disbursed_budget": 165000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-ศษ-041",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดสตูล",
+          "allocated_budget": 262500,
+          "disbursed_budget": 213500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-ทถ-418",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 209000,
+          "disbursed_budget": 169000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-กษ-663",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 532500,
+          "disbursed_budget": 393000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-พช-689",
+          "responsible_agency": "พมจสตูล",
+          "allocated_budget": 73500,
+          "disbursed_budget": 46000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D042",
+          "activity_id": "2568-ศษ-673",
+          "responsible_agency": "พมจสตูล",
+          "allocated_budget": 51000,
+          "disbursed_budget": 32000
+        }
+      ]
+    },
+    {
+      "document_id": "D043",
+      "total_activities": 8,
+      "total_actual_spending": 2404500,
+      "agency_spending_percentages": {
+        "อบต.บ้านแหลม": 38.69827406945311,
+        "องค์การบริหารส่วนตำบลบ้านแหลม": 61.30172593054689
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-สค-087",
+          "responsible_agency": "อบต.บ้านแหลม",
+          "allocated_budget": 344000,
+          "disbursed_budget": 273000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-สธ-022",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 435500,
+          "disbursed_budget": 259000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-กษ-404",
+          "responsible_agency": "อบต.บ้านแหลม",
+          "allocated_budget": 371500,
+          "disbursed_budget": 251000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-พช-448",
+          "responsible_agency": "อบต.บ้านแหลม",
+          "allocated_budget": 342500,
+          "disbursed_budget": 200500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-พช-119",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 684500,
+          "disbursed_budget": 617500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-ศษ-564",
+          "responsible_agency": "อบต.บ้านแหลม",
+          "allocated_budget": 486000,
+          "disbursed_budget": 330000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-ทถ-005",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 344000,
+          "disbursed_budget": 273000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D043",
+          "activity_id": "2568-กษ-308",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 240500,
+          "disbursed_budget": 191000
+        }
+      ]
+    },
+    {
+      "document_id": "D044",
+      "total_activities": 9,
+      "total_actual_spending": 3310000,
+      "agency_spending_percentages": {
+        "รพ.สต.หนองบัว": 47.73413897280967,
+        "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว": 39.425981873111784,
+        "รพ. สต.หนองบัว": 12.83987915407855
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-สค-037",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 614500,
+          "disbursed_budget": 503500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-กษ-422",
+          "responsible_agency": "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว",
+          "allocated_budget": 301000,
+          "disbursed_budget": 280500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-กษ-176",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 334000,
+          "disbursed_budget": 218000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-สค-976",
+          "responsible_agency": "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว",
+          "allocated_budget": 130500,
+          "disbursed_budget": 108000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-สค-133",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 221500,
+          "disbursed_budget": 145500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-ศษ-920",
+          "responsible_agency": "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว",
+          "allocated_budget": 597500,
+          "disbursed_budget": 369000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-พช-202",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 295000,
+          "disbursed_budget": 186000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-ศษ-647",
+          "responsible_agency": "รพ. สต.หนองบัว",
+          "allocated_budget": 614500,
+          "disbursed_budget": 503500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D044",
+          "activity_id": "2567-พช-930",
+          "responsible_agency": "รพ. สต.หนองบัว",
+          "allocated_budget": 430000,
+          "disbursed_budget": 352000
+        }
+      ]
+    },
+    {
+      "document_id": "D045",
+      "total_activities": 9,
+      "total_actual_spending": 1787500,
+      "agency_spending_percentages": {
+        "สนง.เกษตรอำเภอปาย": 57.06293706293706,
+        "สำนักงานเกษตรอำเภอปาย": 42.93706293706294
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-สค-201",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 194000,
+          "disbursed_budget": 153000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-สธ-315",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 559500,
+          "disbursed_budget": 409000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-สธ-543",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 61500,
+          "disbursed_budget": 51500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-สธ-403",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 603500,
+          "disbursed_budget": 404000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-กษ-412",
+          "responsible_agency": "สนง.เกษตรอำเภอปาย",
+          "allocated_budget": 320500,
+          "disbursed_budget": 260000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-ทถ-470",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 173500,
+          "disbursed_budget": 108500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-ทถ-511",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 98000,
+          "disbursed_budget": 94500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-ศษ-014",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 194000,
+          "disbursed_budget": 153000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D045",
+          "activity_id": "2567-พช-329",
+          "responsible_agency": "สำนักงานเกษตรอำเภอปาย",
+          "allocated_budget": 135500,
+          "disbursed_budget": 107000
+        }
+      ]
+    },
+    {
+      "document_id": "D046",
+      "total_activities": 9,
+      "total_actual_spending": 3105000,
+      "agency_spending_percentages": {
+        "ทต.บ้านฉาง": 36.19967793880837,
+        "เทศบาลตำบลบ้านฉาง": 63.80032206119163
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-ศษ-080",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 380000,
+          "disbursed_budget": 251500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-สธ-037",
+          "responsible_agency": "เทศบาลตำบลบ้านฉาง",
+          "allocated_budget": 402000,
+          "disbursed_budget": 396000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-สธ-237",
+          "responsible_agency": "เทศบาลตำบลบ้านฉาง",
+          "allocated_budget": 705000,
+          "disbursed_budget": 610000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-ทถ-681",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 37000,
+          "disbursed_budget": 31000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-ทถ-749",
+          "responsible_agency": "เทศบาลตำบลบ้านฉาง",
+          "allocated_budget": 622500,
+          "disbursed_budget": 402000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-พช-253",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 336000,
+          "disbursed_budget": 292000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-ทถ-299",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 756500,
+          "disbursed_budget": 646000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-สธ-075",
+          "responsible_agency": "เทศบาลตำบลบ้านฉาง",
+          "allocated_budget": 380000,
+          "disbursed_budget": 251500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D046",
+          "activity_id": "2567-สค-943",
+          "responsible_agency": "เทศบาลตำบลบ้านฉาง",
+          "allocated_budget": 266000,
+          "disbursed_budget": 176000
+        }
+      ]
+    },
+    {
+      "document_id": "D047",
+      "total_activities": 9,
+      "total_actual_spending": 3349000,
+      "agency_spending_percentages": {
+        "สสจ.น่าน": 56.5541952806808,
+        "สำนักงานสาธารณสุขจังหวัดน่าน": 21.349656643774264,
+        "สสจน่าน": 11.43625261271723
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-ศษ-744",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 498000,
+          "disbursed_budget": 383000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-พช-757",
+          "responsible_agency": "สำนักงานสาธารณสุขจังหวัดน่าน",
+          "allocated_budget": 544000,
+          "disbursed_budget": 465000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-สค-754",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 290000,
+          "disbursed_budget": 180000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-สค-169",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 125500,
+          "disbursed_budget": 116000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-ทถ-407",
+          "responsible_agency": "สำนักงานสาธารณสุขจังหวัดน่าน",
+          "allocated_budget": 834500,
+          "disbursed_budget": 729500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-ศษ-380",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 266500,
+          "disbursed_budget": 158000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-ทถ-864",
+          "responsible_agency": "สสจน่าน",
+          "allocated_budget": 498000,
+          "disbursed_budget": 383000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-ศษ-355",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 582000,
+          "disbursed_budget": 386500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D047",
+          "activity_id": "2568-กษ-698",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 407000,
+          "disbursed_budget": 270500
+        }
+      ]
+    },
+    {
+      "document_id": "D048",
+      "total_activities": 9,
+      "total_actual_spending": 3871000,
+      "agency_spending_percentages": {
+        "อบต.หนองปลาไหล": 75.36812193231724,
+        "องค์การบริหารส่วนตำบลหนองปลาไหล": 11.805734952208731,
+        "อบต. หนองปลาไหล": 5.30870576078791
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-พช-062",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 284000,
+          "disbursed_budget": 205500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-สค-465",
+          "responsible_agency": "องค์การบริหารส่วนตำบลหนองปลาไหล",
+          "allocated_budget": 706000,
+          "disbursed_budget": 457000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-ทถ-080",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 835500,
+          "disbursed_budget": 712000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-กษ-348",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 786000,
+          "disbursed_budget": 438000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-สค-352",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 416000,
+          "disbursed_budget": 379500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-สธ-833",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 317000,
+          "disbursed_budget": 238500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-ศษ-301",
+          "responsible_agency": "อบต. หนองปลาไหล",
+          "allocated_budget": 284000,
+          "disbursed_budget": 205500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-สธ-448",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 834000,
+          "disbursed_budget": 673500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D048",
+          "activity_id": "2567-สค-114",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 583500,
+          "disbursed_budget": 471000
+        }
+      ]
+    },
+    {
+      "document_id": "D049",
+      "total_activities": 6,
+      "total_actual_spending": 1419797,
+      "agency_spending_percentages": {
+        "เทศบาลเมืองลำพูน": 43.109015949511676,
+        "ทม.ลำพูน": 16.636070624003058,
+        "สสจ.ตราด": 40.25491342648527
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-สค-668",
+          "responsible_agency": "เทศบาลเมืองลำพูน",
+          "allocated_budget": 501000,
+          "disbursed_budget": 392500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-ทถ-895",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 25000,
+          "disbursed_budget": 17500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-ศษ-467",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 323000,
+          "disbursed_budget": 219500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-สธ-428",
+          "responsible_agency": "สสจ.ตราด",
+          "allocated_budget": 528000,
+          "disbursed_budget": 312000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-สธ-320",
+          "responsible_agency": "สสจ.ตราด",
+          "allocated_budget": 372000,
+          "disbursed_budget": 221000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D049",
+          "activity_id": "2568-ทถ-723",
+          "responsible_agency": "สสจ.ตราด",
+          "allocated_budget": 774000,
+          "disbursed_budget": 464000
+        }
+      ]
+    },
+    {
+      "document_id": "D050",
+      "total_activities": 7,
+      "total_actual_spending": 1475700,
+      "agency_spending_percentages": {
+        "สำนักงานเขตบางกะปิ": 31.069997289422036,
+        "สนง.เขตบางกะปิ": 31.03611845226001,
+        "กศน.อำเภอเมือง": 37.893884258317955
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-ศษ-771",
+          "responsible_agency": "สำนักงานเขตบางกะปิ",
+          "allocated_budget": 45000,
+          "disbursed_budget": 28500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-พช-068",
+          "responsible_agency": "สำนักงานเขตบางกะปิ",
+          "allocated_budget": 279500,
+          "disbursed_budget": 182000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-กษ-930",
+          "responsible_agency": "สนง.เขตบางกะปิ",
+          "allocated_budget": 397500,
+          "disbursed_budget": 246000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-ศษ-220",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 521000,
+          "disbursed_budget": 290000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-กษ-620",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 339000,
+          "disbursed_budget": 288000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-สค-629",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 111000,
+          "disbursed_budget": 81000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D050",
+          "activity_id": "2568-สค-489",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 358000,
+          "disbursed_budget": 240000
+        }
+      ]
+    },
+    {
+      "document_id": "D051",
+      "total_activities": 6,
+      "total_actual_spending": 2351000,
+      "agency_spending_percentages": {
+        "องค์การบริหารส่วนตำบลบ้านแหลม": 41.34410888983411,
+        "อบต.บ้านแหลม": 21.926839642683965,
+        "กศน.อำเภอเมือง": 36.72905146748193
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-พช-490",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 427000,
+          "disbursed_budget": 252500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-ทถ-616",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 226000,
+          "disbursed_budget": 208000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-ทถ-911",
+          "responsible_agency": "อบต.บ้านแหลม",
+          "allocated_budget": 623500,
+          "disbursed_budget": 515500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-สค-992",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 488000,
+          "disbursed_budget": 350000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-ทถ-294",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 128000,
+          "disbursed_budget": 97000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D051",
+          "activity_id": "2568-สค-318",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 598000,
+          "disbursed_budget": 333000
+        }
+      ]
+    },
+    {
+      "document_id": "D052",
+      "total_activities": 7,
+      "total_actual_spending": 2984500,
+      "agency_spending_percentages": {
+        "กศน.อำเภอบ้านโป่ง": 40.526051264868486,
+        "พช.อ.เมือง": 59.47394873513151
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-กษ-878",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 322500,
+          "disbursed_budget": 311500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-ศษ-024",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 521500,
+          "disbursed_budget": 434500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-ศษ-967",
+          "responsible_agency": "กศน.อำเภอบ้านโป่ง",
+          "allocated_budget": 705000,
+          "disbursed_budget": 442500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-ทถ-859",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 679000,
+          "disbursed_budget": 504000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-สค-179",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 636000,
+          "disbursed_budget": 462000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-สค-003",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 121000,
+          "disbursed_budget": 104000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D052",
+          "activity_id": "2568-ทถ-243",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 191000,
+          "disbursed_budget": 165000
+        }
+      ]
+    },
+    {
+      "document_id": "D053",
+      "total_activities": 7,
+      "total_actual_spending": 2724500,
+      "agency_spending_percentages": {
+        "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอเมือง": 35.84143879610938,
+        "กศน.อำเภอเมือง": 9.451275463387796,
+        "ทต.บ้านฉาง": 54.707285740502844
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-ทถ-135",
+          "responsible_agency": "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอเมือง",
+          "allocated_budget": 656000,
+          "disbursed_budget": 641000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-สธ-757",
+          "responsible_agency": "ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอเมือง",
+          "allocated_budget": 130500,
+          "disbursed_budget": 88500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-สค-347",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 430000,
+          "disbursed_budget": 257500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-พช-737",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 80000,
+          "disbursed_budget": 68000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-พช-247",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 739000,
+          "disbursed_budget": 594000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-สค-799",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 660000,
+          "disbursed_budget": 604000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D053",
+          "activity_id": "2568-ศษ-373",
+          "responsible_agency": "ทต.บ้านฉาง",
+          "allocated_budget": 136000,
+          "disbursed_budget": 90000
+        }
+      ]
+    },
+    {
+      "document_id": "D054",
+      "total_activities": 6,
+      "total_actual_spending": 2420000,
+      "agency_spending_percentages": {
+        "สสจ.น่าน": 17.582644628099175,
+        "สำนักงานสาธารณสุขจังหวัดน่าน": 5.12396694214876,
+        "อบจ.พะเยา": 77.29338842975206
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-พช-204",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 208500,
+          "disbursed_budget": 197500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-กษ-577",
+          "responsible_agency": "สสจ.น่าน",
+          "allocated_budget": 145000,
+          "disbursed_budget": 95500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-พช-339",
+          "responsible_agency": "สำนักงานสาธารณสุขจังหวัดน่าน",
+          "allocated_budget": 175000,
+          "disbursed_budget": 124000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-ศษ-702",
+          "responsible_agency": "อบจ.พะเยา",
+          "allocated_budget": 764000,
+          "disbursed_budget": 478000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-สธ-495",
+          "responsible_agency": "อบจ.พะเยา",
+          "allocated_budget": 842000,
+          "disbursed_budget": 686000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D054",
+          "activity_id": "2568-ศษ-546",
+          "responsible_agency": "อบจ.พะเยา",
+          "allocated_budget": 770000,
+          "disbursed_budget": 712000
+        }
+      ]
+    },
+    {
+      "document_id": "D055",
+      "total_activities": 7,
+      "total_actual_spending": 2841000,
+      "agency_spending_percentages": {
+        "สำนักงานเขตดอนเมือง": 48.0640619500176,
+        "สนง.เขตดอนเมือง": 13.32242168250616,
+        "ทต.แม่ริม": 38.61351636747624
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-ศษ-535",
+          "responsible_agency": "สำนักงานเขตดอนเมือง",
+          "allocated_budget": 282000,
+          "disbursed_budget": 223000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-สค-738",
+          "responsible_agency": "สำนักงานเขตดอนเมือง",
+          "allocated_budget": 809000,
+          "disbursed_budget": 789500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-ศษ-929",
+          "responsible_agency": "สนง.เขตดอนเมือง",
+          "allocated_budget": 647500,
+          "disbursed_budget": 378500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-ศษ-084",
+          "responsible_agency": "ทต.แม่ริม",
+          "allocated_budget": 502000,
+          "disbursed_budget": 286000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-สค-369",
+          "responsible_agency": "ทต.แม่ริม",
+          "allocated_budget": 279000,
+          "disbursed_budget": 258000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-ศษ-938",
+          "responsible_agency": "ทต.แม่ริม",
+          "allocated_budget": 802000,
+          "disbursed_budget": 588000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D055",
+          "activity_id": "2567-ศษ-050",
+          "responsible_agency": "ทต.แม่ริม",
+          "allocated_budget": 612000,
+          "disbursed_budget": 529000
+        }
+      ]
+    },
+    {
+      "document_id": "D056",
+      "total_activities": 7,
+      "total_actual_spending": 3029500,
+      "agency_spending_percentages": {
+        "สสจ.ตราด": 10.282224789569237,
+        "สำนักงานสาธารณสุขจังหวัดตราด": 29.691368212576332,
+        "กศน.อำเภอเมือง": 60.026406997854435
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-สธ-791",
+          "responsible_agency": "สสจ.ตราด",
+          "allocated_budget": 372000,
+          "disbursed_budget": 311500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-กษ-478",
+          "responsible_agency": "สำนักงานสาธารณสุขจังหวัดตราด",
+          "allocated_budget": 757500,
+          "disbursed_budget": 517500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-กษ-155",
+          "responsible_agency": "สำนักงานสาธารณสุขจังหวัดตราด",
+          "allocated_budget": 539000,
+          "disbursed_budget": 381500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-กษ-870",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 570000,
+          "disbursed_budget": 524000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-สค-862",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 474000,
+          "disbursed_budget": 336000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-ทถ-501",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 538000,
+          "disbursed_budget": 500000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D056",
+          "activity_id": "2568-สค-428",
+          "responsible_agency": "กศน.อำเภอเมือง",
+          "allocated_budget": 692000,
+          "disbursed_budget": 405000
+        }
+      ]
+    },
+    {
+      "document_id": "D057",
+      "total_activities": 6,
+      "total_actual_spending": 2697800,
+      "agency_spending_percentages": {
+        "องค์การบริหารส่วนตำบลบ้านแหลม": 54.19230484098154,
+        "ทม.ลำพูน": 45.80769515901846
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-สค-063",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 838000,
+          "disbursed_budget": 641000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-พช-341",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 440500,
+          "disbursed_budget": 340500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-กษ-857",
+          "responsible_agency": "องค์การบริหารส่วนตำบลบ้านแหลม",
+          "allocated_budget": 571500,
+          "disbursed_budget": 480500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-ศษ-514",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 493000,
+          "disbursed_budget": 444000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-ศษ-427",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 90000,
+          "disbursed_budget": 64000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D057",
+          "activity_id": "2567-ศษ-592",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 562000,
+          "disbursed_budget": 450000
+        }
+      ]
+    },
+    {
+      "document_id": "D058",
+      "total_activities": 7,
+      "total_actual_spending": 2577600,
+      "agency_spending_percentages": {
+        "สนง.เขตบางกะปิ": 32.735878336437,
+        "ทม.ลำพูน": 67.264121663563,
+        "สำนักงานเขตบางกะปิ": 0.0
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-พช-382",
+          "responsible_agency": "สนง.เขตบางกะปิ",
+          "allocated_budget": 387000,
+          "disbursed_budget": 270000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-ทถ-194",
+          "responsible_agency": "สนง.เขตบางกะปิ",
+          "allocated_budget": 377500,
+          "disbursed_budget": 339000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-พช-728",
+          "responsible_agency": "สนง.เขตบางกะปิ",
+          "allocated_budget": 409000,
+          "disbursed_budget": 243500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-ทถ-087",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 137000,
+          "disbursed_budget": 77000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-สธ-743",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 806000,
+          "disbursed_budget": 532000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-ศษ-772",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 432000,
+          "disbursed_budget": 411000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D058",
+          "activity_id": "2567-กษ-460",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 188000,
+          "disbursed_budget": 149000
+        }
+      ]
+    },
+    {
+      "document_id": "D059",
+      "total_activities": 6,
+      "total_actual_spending": 2354500,
+      "agency_spending_percentages": {
+        "รพ.สต.หนองบัว": 52.87746867700149,
+        "พมจ.ลำปาง": 47.12253132299851
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-กษ-908",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 568000,
+          "disbursed_budget": 503500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-สธ-393",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 589000,
+          "disbursed_budget": 398000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-สค-592",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 379000,
+          "disbursed_budget": 336500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-ศษ-251",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 254000,
+          "disbursed_budget": 164000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-สธ-212",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 416000,
+          "disbursed_budget": 350000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D059",
+          "activity_id": "2567-พช-056",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 816000,
+          "disbursed_budget": 654000
+        }
+      ]
+    },
+    {
+      "document_id": "D060",
+      "total_activities": 7,
+      "total_actual_spending": 3907500,
+      "agency_spending_percentages": {
+        "อบต.หนองปลาไหล": 35.80294305822137,
+        "องค์การบริหารส่วนตำบลหนองปลาไหล": 6.705054382600128,
+        "สถจ.ชุมพร": 57.4920025591785
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-สธ-104",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 505500,
+          "disbursed_budget": 487500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-พช-682",
+          "responsible_agency": "องค์การบริหารส่วนตำบลหนองปลาไหล",
+          "allocated_budget": 333500,
+          "disbursed_budget": 262000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-สธ-447",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 690500,
+          "disbursed_budget": 645000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-กษ-872",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 839000,
+          "disbursed_budget": 506000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-พช-026",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 422000,
+          "disbursed_budget": 297000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-กษ-777",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 848000,
+          "disbursed_budget": 670000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D060",
+          "activity_id": "2567-พช-872",
+          "responsible_agency": "สถจ.ชุมพร",
+          "allocated_budget": 313000,
+          "disbursed_budget": 241000
+        }
+      ]
+    },
+    {
+      "document_id": "D061",
+      "total_activities": 7,
+      "total_actual_spending": 2404500,
+      "agency_spending_percentages": {
+        "สำนักงานเขตหนองแขม": 44.91578311499272,
+        "สนง.เขตหนองแขม": 8.712830110210023,
+        "พมจ.สตูล": 56.37138677479725
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-พช-426",
+          "responsible_agency": "สำนักงานเขตหนองแขม",
+          "allocated_budget": 660000,
+          "disbursed_budget": 599500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-กษ-749",
+          "responsible_agency": "สำนักงานเขตหนองแขม",
+          "allocated_budget": 285500,
+          "disbursed_budget": 269500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-ศษ-290",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 227500,
+          "disbursed_budget": 209500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-สธ-856",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 184000,
+          "disbursed_budget": 172000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-พช-777",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 131000,
+          "disbursed_budget": 110000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-ทถ-152",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 726000,
+          "disbursed_budget": 717000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D061",
+          "activity_id": "2568-พช-408",
+          "responsible_agency": "พมจ.สตูล",
+          "allocated_budget": 406000,
+          "disbursed_budget": 339000
+        }
+      ]
+    },
+    {
+      "document_id": "D062",
+      "total_activities": 6,
+      "total_actual_spending": 2901500,
+      "agency_spending_percentages": {
+        "สนง.เขตหนองแขม": 38.635188695502324,
+        "อบต.หนองปลาไหล": 51.364811304497676
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-ทถ-734",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 286500,
+          "disbursed_budget": 228000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-ทถ-604",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 467000,
+          "disbursed_budget": 312500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-ศษ-641",
+          "responsible_agency": "สนง.เขตหนองแขม",
+          "allocated_budget": 773500,
+          "disbursed_budget": 586500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-พช-509",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 586000,
+          "disbursed_budget": 522000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-กษ-899",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 745000,
+          "disbursed_budget": 703000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D062",
+          "activity_id": "2568-ศษ-568",
+          "responsible_agency": "อบต.หนองปลาไหล",
+          "allocated_budget": 271000,
+          "disbursed_budget": 256000
+        }
+      ]
+    },
+    {
+      "document_id": "D063",
+      "total_activities": 6,
+      "total_actual_spending": 2785500,
+      "agency_spending_percentages": {
+        "รพ.สต.หนองบัว": 56.417159935379646,
+        "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว": 28.038054209316104,
+        "ทม.ลำพูน": 25.544785855304253
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-ทถ-934",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 427500,
+          "disbursed_budget": 417000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-กษ-985",
+          "responsible_agency": "รพ.สต.หนองบัว",
+          "allocated_budget": 609500,
+          "disbursed_budget": 382500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-ทถ-443",
+          "responsible_agency": "โรงพยาบาลส่งเสริมสุขภาพตำบลหนองบัว",
+          "allocated_budget": 809000,
+          "disbursed_budget": 781000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-สค-798",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 535000,
+          "disbursed_budget": 468000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-สธ-436",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 206000,
+          "disbursed_budget": 203000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D063",
+          "activity_id": "2568-ทถ-424",
+          "responsible_agency": "ทม.ลำพูน",
+          "allocated_budget": 56000,
+          "disbursed_budget": 30000
+        }
+      ]
+    },
+    {
+      "document_id": "D064",
+      "total_activities": 7,
+      "total_actual_spending": 2221000,
+      "agency_spending_percentages": {
+        "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง": 44.912210715893744,
+        "พมจ.ลำปาง": 55.08778928410626
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-ศษ-301",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 321500,
+          "disbursed_budget": 245000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-สธ-310",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 38500,
+          "disbursed_budget": 24500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-สธ-730",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 717500,
+          "disbursed_budget": 509500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-พช-825",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 121000,
+          "disbursed_budget": 78000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-สธ-962",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 174000,
+          "disbursed_budget": 100500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-ศษ-014",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 475500,
+          "disbursed_budget": 262500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D064",
+          "activity_id": "2568-พช-307",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 248000,
+          "disbursed_budget": 140000
+        }
+      ]
+    },
+    {
+      "document_id": "D065",
+      "total_activities": 7,
+      "total_actual_spending": 2045500,
+      "agency_spending_percentages": {
+        "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง": 16.69518454925446,
+        "พมจ.ลำปาง": 83.30481545074554
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-สธ-229",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 32000,
+          "disbursed_budget": 23500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-พช-622",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 457000,
+          "disbursed_budget": 262500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-ศษ-156",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 284000,
+          "disbursed_budget": 254000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-ศษ-216",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 371000,
+          "disbursed_budget": 337500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-ทถ-417",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 39000,
+          "disbursed_budget": 25500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-พช-857",
+          "responsible_agency": "พมจ.ลำปาง",
+          "allocated_budget": 510500,
+          "disbursed_budget": 456500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D065",
+          "activity_id": "2568-พช-175",
+          "responsible_agency": "สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์จังหวัดลำปาง",
+          "allocated_budget": 521500,
+          "disbursed_budget": 311000
+        }
+      ]
+    },
+    {
+      "document_id": "D066",
+      "total_activities": 7,
+      "total_actual_spending": 1438000,
+      "agency_spending_percentages": {
+        "พช.อ.เมือง": 97.60153004172462,
+        "สำนักงานพัฒนาชุมชนอำเภอเมือง": 2.3984699582753825
+      },
+      "activities": [
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-สค-150",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 113000,
+          "disbursed_budget": 75000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-ทถ-107",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 220000,
+          "disbursed_budget": 163000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-ทถ-013",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 310500,
+          "disbursed_budget": 238000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-กษ-475",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 183000,
+          "disbursed_budget": 131500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-พช-071",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 365000,
+          "disbursed_budget": 239500
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-กษ-918",
+          "responsible_agency": "พช.อ.เมือง",
+          "allocated_budget": 436500,
+          "disbursed_budget": 253000
+        },
+        {
+          "reason": "ไม่มีข้อมูล",
+          "document_id": "D066",
+          "activity_id": "2567-ศษ-885",
+          "responsible_agency": "สำนักงานพัฒนาชุมชนอำเภอเมือง",
+          "allocated_budget": 49000,
+          "disbursed_budget": 34500
+        }
+      ]
+    }
+  ]
+}

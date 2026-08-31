@@ -1,0 +1,45 @@
+{
+ "seed": 20260815,
+ "n_docs": 150,
+ "tasks": {
+  "T1": {
+   "n_docs": 33,
+   "chars": 52163,
+   "est_tokens_hi": 20865,
+   "n_rows": 219
+  },
+  "T2": {
+   "n_docs": 33,
+   "chars": 55591,
+   "est_tokens_hi": 22236,
+   "n_rows": 248
+  },
+  "T3": {
+   "n_docs": 17,
+   "chars": 27234,
+   "est_tokens_hi": 10894,
+   "n_rows": 112
+  },
+  "T4": {
+   "n_docs": 17,
+   "chars": 29066,
+   "est_tokens_hi": 11626,
+   "n_rows": 111
+  },
+  "T5": {
+   "n_docs": 17,
+   "chars": 25959,
+   "est_tokens_hi": 10384,
+   "n_rows": 107
+  },
+  "T6": {
+   "n_docs": 33,
+   "chars": 51265,
+   "est_tokens_hi": 20506,
+   "n_rows": 212
+  }
+ },
+ "n_cells": 9081,
+ "n_traps": 135,
+ "hash_bank": "c2c2173e2ca65319"
+}

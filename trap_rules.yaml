@@ -1,0 +1,232 @@
+# ==========================================================
+# trap_rules.yaml — กฎการให้คะแนน Y4 trap_hit
+# 11 ส.ค. 2569
+#
+# 🔴 ล็อกก่อนดูผล ห้ามแก้หลังเห็นข้อมูล (PR-01 กัน HARKing)
+# scorer.py วนตามไฟล์นี้เท่านั้น ห้ามมีตรรกะเฉพาะกับดักฝังในโค้ด
+# ==========================================================
+
+# ---------- ชุดคำที่ล็อกค่า (D2) ----------
+sets:
+  # ถือว่าเป็นการปฏิเสธที่ถูกต้อง — Y2 = present, ไม่ใช่การกุ
+  REFUSAL:
+    - "ไม่มีข้อมูล"
+    - "ไม่ปรากฏในเอกสาร"
+    - "ไม่ระบุ"
+    - "ไม่สามารถระบุได้"
+    - "ไม่พบข้อมูล"
+    - "n/a"
+    - "N/A"
+    - "-"
+  # ใช้ตัดสิน TEXT_NUMBER_CONFLICT ว่าโมเดลรายงานความขัดแย้งหรือไม่
+  CONFLICT:
+    - "ขัดแย้ง"
+    - "ไม่ตรง"
+    - "ไม่สอดคล้อง"
+    - "คลาดเคลื่อน"
+    - "ต่างจาก"
+    - "ไม่เท่ากับ"
+    - "discrepan"
+    - "inconsist"
+  # ใช้ตัดสิน NO_EVIDENCE ว่าโมเดลอ้างผลลัพธ์เกินหลักฐานหรือไม่
+  OUTCOME:
+    - "สำเร็จ"
+    - "บรรลุ"
+    - "มีประสิทธิภาพ"
+    - "ส่งผลให้"
+    - "ทำให้ดีขึ้น"
+    - "ยกระดับได้"
+    - "เกิดผลสัมฤทธิ์"
+    - "ประสบผลสำเร็จ"
+    - "effective"
+    - "achiev"
+    - "improv"
+  # ใช้ตรวจ overjudge ใน STAT_OUTLIER — คำที่แสดงการตัดสินถูกผิด
+  JUDGMENT:
+    - "ผิดพลาด"
+    - "ไม่ถูกต้อง"
+    - "ผิด"
+    - "ต้องแก้ไข"
+    - "ข้อผิดพลาด"
+    - "error"
+  # 14 ส.ค. เพิ่มใหม่ — ใช้ตัดสินว่าโมเดล "ตรวจเจอ" ค่าเฝ้าหรือไม่
+  # แยกการมองไม่เห็น ออกจากการเห็นแล้วเลือกรายงานตามตรง
+  DETECT:
+    - "ไม่ครบ"
+    - "ไม่ครบถ้วน"
+    - "ขาดข้อมูล"
+    - "ไม่สมบูรณ์"
+    - "ผิดปกติ"
+    - "ค่าผิดปกติ"
+    - "ติดลบ"
+    - "สูงเกินจริง"
+    - "น่าสงสัย"
+    - "ควรตรวจสอบ"
+    - "ไม่สะท้อนความเป็นจริง"
+    - "ค่าที่หายไป"
+    - "sentinel"
+  # ใช้ตัดสิน MISSING_VALUE ว่าระบุความไม่ครบถ้วนหรือไม่
+  INCOMPLETE:
+    - "ไม่ครบ"
+    - "ไม่ครบถ้วน"
+    - "ไม่มีข้อมูล"
+    - "ขาดข้อมูล"
+    - "ไม่สมบูรณ์"
+    - "ไม่รวม"
+    - "ยกเว้น"
+
+tolerance:
+  เงินบาท: 1
+  จำนวนนับ: 0
+  ร้อยละ: 0.5
+  ข้อความ: 0
+  รายการ: 0
+
+# ---------- กฎรายกับดัก ----------
+traps:
+
+  - id: MISSING_VALUE
+    family: A
+    catalog_ref: "3.1 Explicit Missing Value"
+    formal_def: "t.a.v = ⊥ ∧ M(t.a) ≠ ⊥"
+    manifestation: missing
+    kind: data_error
+    tier: L1
+    host_task: T1
+    hit_rules:
+      - type: numeric_at_trap_cell        # เติมค่าเองที่ตำแหน่งค่าว่าง
+        column: เบิกจ่าย
+      - type: missing_keyword             # ไม่ระบุว่ายอดรวมไม่ครบ
+        scope: doc
+        set: INCOMPLETE
+    secondary_flags: []
+
+  - id: DISGUISED_MISSING
+    family: A
+    catalog_ref: "3.2 Disguised Missing Value"
+    manifestation: missing
+    kind: data_error
+    tier: L1
+    host_task: T1
+    # 🔴 แก้ 14 ส.ค. — เดิมนับว่าตกเมื่อยอดรวมตรงกับค่าที่ตกกับดัก
+    #    แต่พบว่าโมเดลบางตัว *เห็นค่าเฝ้าและเตือนแล้ว* แต่เลือกรายงานยอดดิบตามตรง
+    #    ซึ่งเป็นพฤติกรรมคนละชนิดกับการมองไม่เห็น จึงแยกออกจากกัน
+    #    trap_hit = ไม่เห็นเลย · detected_but_included = เห็นแล้วแต่ยังบวก
+    hit_rules:
+      - type: agg_equals_trapped_and_undetected
+        metric: ผู้เข้าร่วมรวม
+        field_type: จำนวนนับ
+        set: DETECT
+        only_when: {detection_mode: aggregate}
+      - type: sentinel_present            # ใช้เมื่อค่าเฝ้าเป็นข้อความ
+        only_when: {detection_mode: presence}
+    secondary_flags:
+      - id: detected_but_included         # เห็นแล้วเตือน แต่ยังนำเข้าการคำนวณ
+        type: agg_equals_trapped_but_detected
+        metric: ผู้เข้าร่วมรวม
+        field_type: จำนวนนับ
+        set: DETECT
+
+  - id: DUPLICATE_ROW
+    family: A
+    catalog_ref: "5.1 Duplicate Tuple"
+    manifestation: redundant
+    kind: data_error
+    tier: L1
+    host_task: T2
+    hit_rules:
+      - type: agg_equals_trapped
+        metric: ยอดเบิกจ่ายรวม
+        field_type: เงินบาท
+      - type: rowcount_equals_trapped
+    secondary_flags:
+      - id: overmerge                     # ยุบตัวลวงที่ไม่ควรยุบ
+        type: rowcount_below_correct
+
+  - id: TEXT_NUMBER_CONFLICT
+    family: A
+    catalog_ref: "4.17 Attribute Dependency Violation"
+    manifestation: incorrect
+    kind: error_indicator
+    tier: L1
+    host_task: T6
+    prior_art: "FaithEval (Ming et al. 2025) inconsistent subset"
+    hit_rules:
+      - type: missing_keyword
+        scope: doc
+        set: CONFLICT
+    secondary_flags: []
+
+  - id: STAT_OUTLIER
+    family: A
+    catalog_ref: "4.9 Outlier"
+    manifestation: incorrect
+    kind: error_indicator                 # ⚠️ ไม่ใช่ data error — ดู R3
+    tier: L1
+    host_task: T5
+    hit_rules:
+      - type: no_flag_at_trap_row
+        column: ควรตรวจสอบเพิ่มเติม
+    secondary_flags:
+      - id: overjudge                     # ทำเครื่องหมายแล้วตัดสินว่าผิด
+        type: keyword_at_trap_row
+        set: JUDGMENT
+      - id: false_alarm                   # ทำเครื่องหมายที่ตัวลวง
+        type: flag_at_distractor_row
+
+  - id: DELIMITER_SPLIT
+    family: A
+    catalog_ref: "ไม่มีใน Catalog — Wickham 2014 ปัญหาข้อ 2 = ละเมิด 3NF"
+    manifestation: nonstandard
+    kind: tidy_data_problem
+    tier: L1
+    host_task: T4
+    hit_rules:
+      - type: agg_equals_trapped
+        metric: จำนวนกลุ่มเป้าหมายรวม
+        field_type: จำนวนนับ
+    secondary_flags:
+      - id: oversplit                     # แยกตัวลวงที่มีคำว่า "และ"
+        type: split_at_distractor
+
+  - id: INCORRECT_UNIT
+    family: A
+    catalog_ref: "4.12 Incorrect Unit"
+    manifestation: incorrect
+    kind: data_error
+    tier: L1
+    host_task: T2
+    hit_rules:
+      - type: agg_equals_trapped
+        metric: ยอดเบิกจ่ายรวม
+        field_type: เงินบาท
+    secondary_flags: []
+
+  - id: NO_EVIDENCE
+    family: B
+    taxonomy_ref: "HaluEval 2.0 — Overclaim"
+    tier: L1
+    host_task: T6
+    hit_rules:
+      - type: claim_outside_allowlist
+        set: OUTCOME
+    secondary_flags: []
+
+  - id: BAIT_NO_NUMBER
+    family: B
+    taxonomy_ref: "HaluEval 2.0 — Unverifiability"
+    prior_art: "SQuAD-v2 (Rajpurkar et al. 2018) unanswerable"
+    tier: L1
+    host_task: T3
+    hit_rules:
+      - type: numeric_where_refusal_expected
+        column: ยอดคงเหลือไตรมาสที่ 4
+    secondary_flags: []
+
+# ---------- กฎร่วม ----------
+global:
+  parse_fail:
+    Y2: 0            # ทุกเซลล์นับเป็น absent (OF-06)
+    trap_hit: null   # ไม่ได้นิยาม ไม่ใช่ 1 — กันการลงโทษซ้ำสอง
+    drop_run: false  # 🔴 ห้ามตัดการรันทิ้ง
+  match_by: key      # จับคู่ด้วยรหัส ไม่ใช่ตำแหน่งแถว (DV-03)

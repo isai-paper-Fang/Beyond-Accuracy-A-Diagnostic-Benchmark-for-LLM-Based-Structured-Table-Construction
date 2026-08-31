@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "A Diagnostic Benchmark for LLM-Based Structured Table Construction"
+message: "If you use this benchmark, please cite the paper."
+type: dataset
+authors:
+  - name: "Anonymous during review"
+license: "MIT AND CC-BY-4.0"
+repository-code: "https://github.com/REPLACE-ME/llm-table-diagnostics"
+keywords:
+  - diagnostic evaluation
+  - structured table construction
+  - data quality
+  - LLM reliability
+  - Thai NLP
+preferred-citation:
+  type: conference-paper
+  title: "Beyond Accuracy: A Diagnostic Benchmark for LLM-Based Structured Table Construction"
+  year: 2026
+  authors:
+    - name: "Anonymous during review"

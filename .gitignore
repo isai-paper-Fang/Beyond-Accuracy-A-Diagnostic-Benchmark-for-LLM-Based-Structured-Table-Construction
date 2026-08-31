@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.aux
+*.log
+*.out
+
+# scratch and derived outputs — reproduce.sh regenerates all of these
+data/_t.csv
+data/_scratch_scores_traps.csv
+data/scores_traps.csv
+data/summary_*.csv
+data/model_m*.csv
+data/sensitivity_traps.csv
+analysis_output.txt
+figs/*.png
+figs/*.pdf
+
+# not published
+data/screenshots/

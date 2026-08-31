@@ -1,0 +1,2214 @@
+วิธีคิดคำนวณและสรุปผลการดำเนินงานจากเอกสารทั้งหมด มีรายละเอียดดังนี้ครับ:
+
+การดึงข้อมูลรายกิจกรรม: ในแต่ละเอกสาร จะมีการดึงข้อมูลรหัสกิจกรรม รหัสเอกสาร เหตุผล (อ้างอิงจากสถานะหรือหมายเหตุของกิจกรรมนั้นๆ หากไม่มีระบุไว้เป็นพิเศษจะใช้สถานะการดำเนินงานหรือระบุว่าไม่มีข้อมูลตามจริง) งบจัดสรร เบิกจ่าย ร้อยละการเบิกจ่าย (คำนวณจากยอดเบิกจ่ายหารด้วยงบจัดสรร คูณด้วย 100) จำนวนผู้เข้าร่วม และความครบถ้วนของข้อมูลในแถวนั้น
+
+การคำนวณยอดรวม: สำหรับแต่ละเอกสาร จะทำการรวมยอดเบิกจ่ายทั้งหมดเป็นบาท และรวมจำนวนผู้เข้าร่วมทั้งหมดของทุกกิจกรรมในเอกสารนั้นๆ
+
+การจัดรูปแบบ: ตัวเลขทั้งหมดจะถูกแสดงเป็นเลขอารบิกโดยไม่มีเครื่องหมายคั่นหลักพัน และจัดโครงสร้างข้อมูลให้อยู่ในรูปแบบ JSON ที่มีฟิลด์ "เหตุผล" เป็นฟิลด์แรกเสมอตามเงื่อนไขที่กำหนด
+
+{
+  "documents": [
+    {
+      "document_id": "D001",
+      "total_disbursement": 1876000,
+      "total_participants": 773,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-พช-757",
+          "allocated_budget": 307000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 45,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-105",
+          "allocated_budget": 439500,
+          "disbursement": 253000,
+          "disbursement_percentage": 57.5654,
+          "participants": 111,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-274",
+          "allocated_budget": 799500,
+          "disbursement": 632500,
+          "disbursement_percentage": 79.1121,
+          "participants": 142,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-024",
+          "allocated_budget": 828500,
+          "disbursement": 570000,
+          "disbursement_percentage": 68.7991,
+          "participants": 48,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-102",
+          "allocated_budget": 507000,
+          "disbursement": 365000,
+          "disbursement_percentage": 71.9921,
+          "participants": 136,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-กษ-552",
+          "allocated_budget": 638000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 110,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-600",
+          "allocated_budget": 87500,
+          "disbursement": 53500,
+          "disbursement_percentage": 61.1429,
+          "participants": 121,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D002",
+      "total_disbursement": 1023000,
+      "total_participants": 912,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-พช-399",
+          "allocated_budget": 310500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 228,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-283",
+          "allocated_budget": 111500,
+          "disbursement": 107000,
+          "disbursement_percentage": 95.9641,
+          "participants": 232,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-048",
+          "allocated_budget": 491500,
+          "disbursement": 335000,
+          "disbursement_percentage": 68.1689,
+          "participants": 35,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-738",
+          "allocated_budget": 76000,
+          "disbursement": 72000,
+          "disbursement_percentage": 94.7368,
+          "participants": 246,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-292",
+          "allocated_budget": 366000,
+          "disbursement": 250000,
+          "disbursement_percentage": 68.306,
+          "participants": 63,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-สค-928",
+          "allocated_budget": 606000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 55,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-665",
+          "allocated_budget": 380000,
+          "disbursement": 259000,
+          "disbursement_percentage": 68.1579,
+          "participants": 47,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D003",
+      "total_disbursement": 1963000,
+      "total_participants": 801,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-สค-498",
+          "allocated_budget": 132000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 60,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-201",
+          "allocated_budget": 331500,
+          "disbursement": 244000,
+          "disbursement_percentage": 73.6048,
+          "participants": 61,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-950",
+          "allocated_budget": 578500,
+          "disbursement": 578000,
+          "disbursement_percentage": 99.9136,
+          "participants": 137,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-952",
+          "allocated_budget": 441000,
+          "disbursement": 300500,
+          "disbursement_percentage": 68.1406,
+          "participants": 244,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-สธ-590",
+          "allocated_budget": 595000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 229,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-168",
+          "allocated_budget": 375500,
+          "disbursement": 214000,
+          "disbursement_percentage": 56.9907,
+          "participants": 42,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-068",
+          "allocated_budget": 595500,
+          "disbursement": 597000,
+          "disbursement_percentage": 100.2519,
+          "participants": 26,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D004",
+      "total_disbursement": 1573500,
+      "total_participants": 933,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-ทถ-509",
+          "allocated_budget": 177000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 121,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-329",
+          "allocated_budget": 394000,
+          "disbursement": 389500,
+          "disbursement_percentage": 98.8579,
+          "participants": 197,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-201",
+          "allocated_budget": 771000,
+          "disbursement": 711500,
+          "disbursement_percentage": 92.2828,
+          "participants": 113,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-529",
+          "allocated_budget": 271000,
+          "disbursement": 160500,
+          "disbursement_percentage": 59.2251,
+          "participants": 94,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-กษ-532",
+          "allocated_budget": 532500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 164,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-679",
+          "allocated_budget": 103000,
+          "disbursement": 72000,
+          "disbursement_percentage": 69.9029,
+          "participants": 233,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-798",
+          "allocated_budget": 384000,
+          "disbursement": 217500,
+          "disbursement_percentage": 56.6406,
+          "participants": 41,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D005",
+      "total_disbursement": 1066000,
+      "total_participants": 778,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-สธ-343",
+          "allocated_budget": 346500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 230,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-619",
+          "allocated_budget": 415500,
+          "disbursement": 231500,
+          "disbursement_percentage": 55.716,
+          "participants": 38,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-324",
+          "allocated_budget": 171000,
+          "disbursement": 139000,
+          "disbursement_percentage": 81.2865,
+          "participants": 91,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-680",
+          "allocated_budget": 180500,
+          "disbursement": 161500,
+          "disbursement_percentage": 89.4737,
+          "participants": 168,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-พช-167",
+          "allocated_budget": 287000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 72,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-274",
+          "allocated_budget": 690000,
+          "disbursement": 428000,
+          "disbursement_percentage": 62.029,
+          "participants": 77,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-044",
+          "allocated_budget": 228000,
+          "disbursement": 206000,
+          "disbursement_percentage": 90.3509,
+          "participants": 112,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D006",
+      "total_disbursement": 1878000,
+      "total_participants": 768,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-กษ-376",
+          "allocated_budget": 209000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 86,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-780",
+          "allocated_budget": 180500,
+          "disbursement": 163000,
+          "disbursement_percentage": 90.3047,
+          "participants": 90,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-938",
+          "allocated_budget": 644500,
+          "disbursement": 597500,
+          "disbursement_percentage": 92.7075,
+          "participants": 72,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-282",
+          "allocated_budget": 709500,
+          "disbursement": 567500,
+          "disbursement_percentage": 79.9859,
+          "participants": 143,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-กษ-487",
+          "allocated_budget": 392000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 130,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-252",
+          "allocated_budget": 355500,
+          "disbursement": 343000,
+          "disbursement_percentage": 96.4838,
+          "participants": 194,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-680",
+          "allocated_budget": 265000,
+          "disbursement": 148000,
+          "disbursement_percentage": 55.8491,
+          "participants": 93,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D007",
+      "total_disbursement": 1097500,
+      "total_participants": 625,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-ศษ-285",
+          "allocated_budget": 598000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 60,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-676",
+          "allocated_budget": 752000,
+          "disbursement": 521500,
+          "disbursement_percentage": 69.3484,
+          "participants": 146,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-204",
+          "allocated_budget": 49000,
+          "disbursement": 28500,
+          "disbursement_percentage": 58.1633,
+          "participants": 139,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-933",
+          "allocated_budget": 515000,
+          "disbursement": 387500,
+          "disbursement_percentage": 75.2427,
+          "participants": 36,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-พช-084",
+          "allocated_budget": 800500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 132,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-524",
+          "allocated_budget": 169500,
+          "disbursement": 159500,
+          "disbursement_percentage": 94.1003,
+          "participants": 112,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D008",
+      "total_disbursement": 1901000,
+      "total_participants": 645,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-ทถ-720",
+          "allocated_budget": 537500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 111,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-447",
+          "allocated_budget": 658500,
+          "disbursement": 392500,
+          "disbursement_percentage": 59.6053,
+          "participants": 152,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-621",
+          "allocated_budget": 572500,
+          "disbursement": 516000,
+          "disbursement_percentage": 90.131,
+          "participants": 25,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-572",
+          "allocated_budget": 749500,
+          "disbursement": 430000,
+          "disbursement_percentage": 57.3717,
+          "participants": 161,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-ทถ-464",
+          "allocated_budget": 389000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 153,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-499",
+          "allocated_budget": 654000,
+          "disbursement": 552500,
+          "disbursement_percentage": 84.4801,
+          "participants": 42,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D009",
+      "total_disbursement": 1920500,
+      "total_participants": 1032,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-สธ-798",
+          "allocated_budget": 801000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 234,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-901",
+          "allocated_budget": 385500,
+          "disbursement": 229500,
+          "disbursement_percentage": 59.5331,
+          "participants": 31,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-765",
+          "allocated_budget": 285500,
+          "disbursement": 260500,
+          "disbursement_percentage": 91.2434,
+          "participants": 211,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-465",
+          "allocated_budget": 238500,
+          "disbursement": 160000,
+          "disbursement_percentage": 67.086,
+          "participants": 118,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-พช-486",
+          "allocated_budget": 228500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 34,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-284",
+          "allocated_budget": 358000,
+          "disbursement": 241000,
+          "disbursement_percentage": 67.3184,
+          "participants": 143,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-538",
+          "allocated_budget": 835000,
+          "disbursement": 499000,
+          "disbursement_percentage": 59.759,
+          "participants": 246,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D010",
+      "total_disbursement": 1759500,
+      "total_participants": 860,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-กษ-092",
+          "allocated_budget": 359500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 113,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-428",
+          "allocated_budget": 599000,
+          "disbursement": 520000,
+          "disbursement_percentage": 86.8114,
+          "participants": 41,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-389",
+          "allocated_budget": 470500,
+          "disbursement": 270500,
+          "disbursement_percentage": 57.492,
+          "participants": 82,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-957",
+          "allocated_budget": 49500,
+          "disbursement": 39500,
+          "disbursement_percentage": 79.798,
+          "participants": 162,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-สธ-653",
+          "allocated_budget": 446500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 171,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-362",
+          "allocated_budget": 783500,
+          "disbursement": 759000,
+          "disbursement_percentage": 96.873,
+          "participants": 186,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-496",
+          "allocated_budget": 82000,
+          "disbursement": 70500,
+          "disbursement_percentage": 85.9756,
+          "participants": 116,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D011",
+      "total_disbursement": 1493500,
+      "total_participants": 1053,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-ทถ-378",
+          "allocated_budget": 699500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 230,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-766",
+          "allocated_budget": 262500,
+          "disbursement": 201500,
+          "disbursement_percentage": 76.7619,
+          "participants": 239,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-366",
+          "allocated_budget": 134500,
+          "disbursement": 107000,
+          "disbursement_percentage": 79.5539,
+          "participants": 117,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-108",
+          "allocated_budget": 833000,
+          "disbursement": 651500,
+          "disbursement_percentage": 78.2113,
+          "participants": 66,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-พช-329",
+          "allocated_budget": 384000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 170,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-566",
+          "allocated_budget": 71500,
+          "disbursement": 60500,
+          "disbursement_percentage": 84.6154,
+          "participants": 132,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-759",
+          "allocated_budget": 430000,
+          "disbursement": 273000,
+          "disbursement_percentage": 63.4884,
+          "participants": 200,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D012",
+      "total_disbursement": 2749500,
+      "total_participants": 848,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-ศษ-136",
+          "allocated_budget": 38000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 111,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-593",
+          "allocated_budget": 769500,
+          "disbursement": 512500,
+          "disbursement_percentage": 66.603,
+          "participants": 215,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-550",
+          "allocated_budget": 78500,
+          "disbursement": 54000,
+          "disbursement_percentage": 68.7898,
+          "participants": 98,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-450",
+          "allocated_budget": 698000,
+          "disbursement": 620500,
+          "disbursement_percentage": 88.8968,
+          "participants": 93,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-757",
+          "allocated_budget": 672000,
+          "disbursement": 600500,
+          "disbursement_percentage": 89.3601,
+          "participants": 73,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-พช-209",
+          "allocated_budget": 518000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 211,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-973",
+          "allocated_budget": 489500,
+          "disbursement": 342500,
+          "disbursement_percentage": 69.9694,
+          "participants": 108,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D013",
+      "total_disbursement": 592500,
+      "total_participants": 685,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-สธ-435",
+          "allocated_budget": 274500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 169,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-194",
+          "allocated_budget": 71500,
+          "disbursement": 68000,
+          "disbursement_percentage": 95.1049,
+          "participants": 53,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-159",
+          "allocated_budget": 56500,
+          "disbursement": 54000,
+          "disbursement_percentage": 95.5752,
+          "participants": 145,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-887",
+          "allocated_budget": 54500,
+          "disbursement": 43500,
+          "disbursement_percentage": 79.8165,
+          "participants": 31,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-สค-973",
+          "allocated_budget": 415500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 69,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-924",
+          "allocated_budget": 638500,
+          "disbursement": 358500,
+          "disbursement_percentage": 56.1472,
+          "participants": 61,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-144",
+          "allocated_budget": 81500,
+          "disbursement": 68500,
+          "disbursement_percentage": 84.0491,
+          "participants": 148,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D014",
+      "total_disbursement": 1635500,
+      "total_participants": 858,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2567-ศษ-966",
+          "allocated_budget": 419000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 35,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-503",
+          "allocated_budget": 464500,
+          "disbursement": 413500,
+          "disbursement_percentage": 89.0205,
+          "participants": 75,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-643",
+          "allocated_budget": 724500,
+          "disbursement": 651000,
+          "disbursement_percentage": 89.8551,
+          "participants": 187,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-365",
+          "allocated_budget": 320500,
+          "disbursement": 263000,
+          "disbursement_percentage": 82.0593,
+          "participants": 224,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-457",
+          "allocated_budget": 70500,
+          "disbursement": 58000,
+          "disbursement_percentage": 82.2695,
+          "participants": 244,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-กษ-717",
+          "allocated_budget": 97000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 38,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-254",
+          "allocated_budget": 422000,
+          "disbursement": 249500,
+          "disbursement_percentage": 59.1232,
+          "participants": 50,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D015",
+      "total_disbursement": 767000,
+      "total_participants": 827,
+      "activities": [
+        {
+          "reason": "ยังไม่ดำเนินการ",
+          "activity_id": "2568-พช-590",
+          "allocated_budget": 29500,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 169,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-635",
+          "allocated_budget": 465000,
+          "disbursement": 438500,
+          "disbursement_percentage": 94.3011,
+          "participants": 114,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-659",
+          "allocated_budget": 243500,
+          "disbursement": 169000,
+          "disbursement_percentage": 69.4045,
+          "participants": 205,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-124",
+          "allocated_budget": 204500,
+          "disbursement": 129000,
+          "disbursement_percentage": 63.0807,
+          "participants": 206,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-ศษ-836",
+          "allocated_budget": 506000,
+          "disbursement": 0,
+          "disbursement_percentage": 0.0,
+          "participants": 46,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-887",
+          "allocated_budget": 35550,
+          "disbursement": 30500,
+          "disbursement_percentage": 85.7947,
+          "participants": 87,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D016",
+      "total_disbursement": 2307500,
+      "total_participants": 223,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-270",
+          "allocated_budget": 745000,
+          "disbursement": 474000,
+          "disbursement_percentage": 63.6242,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-373",
+          "allocated_budget": 582500,
+          "disbursement": 352500,
+          "disbursement_percentage": 60.515,
+          "participants": 53,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-644",
+          "allocated_budget": 157000,
+          "disbursement": 96000,
+          "disbursement_percentage": 61.1465,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-169",
+          "allocated_budget": 742500,
+          "disbursement": 432500,
+          "disbursement_percentage": 58.2492,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-851",
+          "allocated_budget": 214500,
+          "disbursement": 118500,
+          "disbursement_percentage": 55.2448,
+          "participants": 209,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-792",
+          "allocated_budget": 588000,
+          "disbursement": 433000,
+          "disbursement_percentage": 73.6395,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-421",
+          "allocated_budget": 768500,
+          "disbursement": 440500,
+          "disbursement_percentage": 57.3195,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D017",
+      "total_disbursement": 2258000,
+      "total_participants": 30386,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-822",
+          "allocated_budget": 353000,
+          "disbursement": 284500,
+          "disbursement_percentage": 80.5949,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-598",
+          "allocated_budget": 335500,
+          "disbursement": 251500,
+          "disbursement_percentage": 74.9628,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-840",
+          "allocated_budget": 551000,
+          "disbursement": 475500,
+          "disbursement_percentage": 86.2976,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-231",
+          "allocated_budget": 284000,
+          "disbursement": 186000,
+          "disbursement_percentage": 65.493,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-752",
+          "allocated_budget": 24500,
+          "disbursement": 15000,
+          "disbursement_percentage": 61.2245,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-531",
+          "allocated_budget": 709000,
+          "disbursement": 640500,
+          "disbursement_percentage": 90.3385,
+          "participants": 94,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D018",
+      "total_disbursement": 2813500,
+      "total_participants": 272,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-272",
+          "allocated_budget": 772500,
+          "disbursement": 718000,
+          "disbursement_percentage": 92.9437,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-291",
+          "allocated_budget": 140000,
+          "disbursement": 121000,
+          "disbursement_percentage": 86.4286,
+          "participants": 209,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-572",
+          "allocated_budget": 799000,
+          "disbursement": 763000,
+          "disbursement_percentage": 95.4944,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-874",
+          "allocated_budget": 638000,
+          "disbursement": 408000,
+          "disbursement_percentage": 63.9498,
+          "participants": 53,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-สธ-371",
+          "allocated_budget": 406500,
+          "disbursement": 268000,
+          "disbursement_percentage": 65.9286,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-458",
+          "allocated_budget": 497500,
+          "disbursement": 340000,
+          "disbursement_percentage": 68.3417,
+          "participants": 82,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-สธ-095",
+          "allocated_budget": 200000,
+          "disbursement": 143500,
+          "disbursement_percentage": 71.75,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D019",
+      "total_disbursement": 1684500,
+      "total_participants": 331,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-407",
+          "allocated_budget": 296500,
+          "disbursement": 268000,
+          "disbursement_percentage": 90.3879,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-882",
+          "allocated_budget": 756000,
+          "disbursement": 533000,
+          "disbursement_percentage": 70.5026,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2567-พช-659",
+          "allocated_budget": 109000,
+          "disbursement": 64000,
+          "disbursement_percentage": 58.7156,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-035",
+          "allocated_budget": 535000,
+          "disbursement": 344500,
+          "disbursement_percentage": 64.3925,
+          "participants": 192,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-963",
+          "allocated_budget": 199500,
+          "disbursement": 116500,
+          "disbursement_percentage": 58.396,
+          "participants": 231,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-259",
+          "allocated_budget": 346000,
+          "disbursement": 294500,
+          "disbursement_percentage": 85.1156,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D020",
+      "total_disbursement": 2233500,
+      "total_participants": 20433,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-365",
+          "allocated_budget": 810000,
+          "disbursement": 779000,
+          "disbursement_percentage": 96.1728,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-154",
+          "allocated_budget": 157000,
+          "disbursement": 148500,
+          "disbursement_percentage": 94.586,
+          "participants": 109,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-ทถ-706",
+          "allocated_budget": 477000,
+          "disbursement": 441000,
+          "disbursement_percentage": 92.4528,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-กษ-770",
+          "allocated_budget": 331000,
+          "disbursement": 187000,
+          "disbursement_percentage": 56.4955,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-ศษ-382",
+          "allocated_budget": 711000,
+          "disbursement": 499500,
+          "disbursement_percentage": 70.2532,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "อยู่ระหว่างดำเนินการ",
+          "activity_id": "2568-ทถ-049",
+          "allocated_budget": 282000,
+          "disbursement": 178500,
+          "disbursement_percentage": 63.2979,
+          "participants": 137,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D021",
+      "total_disbursement": 2043000,
+      "total_participants": 20465,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-625",
+          "allocated_budget": 508000,
+          "disbursement": 455500,
+          "disbursement_percentage": 89.6654,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-687",
+          "allocated_budget": 181000,
+          "disbursement": 159500,
+          "disbursement_percentage": 88.1215,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-502",
+          "allocated_budget": 218000,
+          "disbursement": 208000,
+          "disbursement_percentage": 95.4128,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-331",
+          "allocated_budget": 498000,
+          "disbursement": 314000,
+          "disbursement_percentage": 63.0522,
+          "participants": 187,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-787",
+          "allocated_budget": 250500,
+          "disbursement": 232500,
+          "disbursement_percentage": 92.8144,
+          "participants": 33,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-935",
+          "allocated_budget": 30500,
+          "disbursement": 28500,
+          "disbursement_percentage": 93.4426,
+          "participants": 140,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-241",
+          "allocated_budget": 570500,
+          "disbursement": 543000,
+          "disbursement_percentage": 95.1797,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D022",
+      "total_disbursement": 2843000,
+      "total_participants": 3000189,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-649",
+          "allocated_budget": 574500,
+          "disbursement": 382000,
+          "disbursement_percentage": 66.4943,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-009",
+          "allocated_budget": 824000,
+          "disbursement": 675500,
+          "disbursement_percentage": 82.0024,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-239",
+          "allocated_budget": 524000,
+          "disbursement": 519000,
+          "disbursement_percentage": 99.0458,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-725",
+          "allocated_budget": 617000,
+          "disbursement": 451000,
+          "disbursement_percentage": 73.0956,
+          "participants": 130,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-555",
+          "allocated_budget": 505000,
+          "disbursement": 445500,
+          "disbursement_percentage": 88.2178,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-374",
+          "allocated_budget": 427500,
+          "disbursement": 320000,
+          "disbursement_percentage": 74.8538,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D023",
+      "total_disbursement": 3496500,
+      "total_participants": 533,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-416",
+          "allocated_budget": 430500,
+          "disbursement": 383000,
+          "disbursement_percentage": 88.9663,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-017",
+          "allocated_budget": 761500,
+          "disbursement": 669000,
+          "disbursement_percentage": 87.8542,
+          "participants": 110,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-097",
+          "allocated_budget": 672500,
+          "disbursement": 412000,
+          "disbursement_percentage": 61.264,
+          "participants": 115,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-081",
+          "allocated_budget": 654500,
+          "disbursement": 590000,
+          "disbursement_percentage": 90.1451,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-829",
+          "allocated_budget": 223000,
+          "disbursement": 181000,
+          "disbursement_percentage": 81.1659,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-012",
+          "allocated_budget": 346000,
+          "disbursement": 284000,
+          "disbursement_percentage": 82.0809,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-692",
+          "allocated_budget": 785500,
+          "disbursement": 770500,
+          "disbursement_percentage": 98.0891,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D024",
+      "total_disbursement": 3296000,
+      "total_participants": 30282,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-497",
+          "allocated_budget": 743000,
+          "disbursement": 520000,
+          "disbursement_percentage": 69.9865,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-356",
+          "allocated_budget": 354500,
+          "disbursement": 312000,
+          "disbursement_percentage": 88.0113,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-071",
+          "allocated_budget": 178500,
+          "disbursement": 157000,
+          "disbursement_percentage": 87.9552,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-554",
+          "allocated_budget": 709500,
+          "disbursement": 453500,
+          "disbursement_percentage": 63.9183,
+          "participants": 185,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-263",
+          "allocated_budget": 539500,
+          "disbursement": 499500,
+          "disbursement_percentage": 92.5857,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-871",
+          "allocated_budget": 843000,
+          "disbursement": 774500,
+          "disbursement_percentage": 91.8743,
+          "participants": 184,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-872",
+          "allocated_budget": 501000,
+          "disbursement": 289000,
+          "disbursement_percentage": 57.6846,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D025",
+      "total_disbursement": 2027500,
+      "total_participants": 279,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-274",
+          "allocated_budget": 360500,
+          "disbursement": 299000,
+          "disbursement_percentage": 82.9404,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-204",
+          "allocated_budget": 189000,
+          "disbursement": 178000,
+          "disbursement_percentage": 94.1799,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-926",
+          "allocated_budget": 383000,
+          "disbursement": 330000,
+          "disbursement_percentage": 86.1619,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-567",
+          "allocated_budget": 534000,
+          "disbursement": 299000,
+          "disbursement_percentage": 55.9925,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-989",
+          "allocated_budget": 558000,
+          "disbursement": 544500,
+          "disbursement_percentage": 97.5806,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-112",
+          "allocated_budget": 484500,
+          "disbursement": 407000,
+          "disbursement_percentage": 83.9835,
+          "participants": 182,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D026",
+      "total_disbursement": 2634000,
+      "total_participants": 3000788,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-932",
+          "allocated_budget": 790000,
+          "disbursement": 559000,
+          "disbursement_percentage": 70.7595,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-119",
+          "allocated_budget": 109000,
+          "disbursement": 97500,
+          "disbursement_percentage": 89.4495,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-406",
+          "allocated_budget": 585000,
+          "disbursement": 462500,
+          "disbursement_percentage": 79.0598,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-601",
+          "allocated_budget": 713000,
+          "disbursement": 526500,
+          "disbursement_percentage": 73.8429,
+          "participants": 187,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-422",
+          "allocated_budget": 416000,
+          "disbursement": 389500,
+          "disbursement_percentage": 93.6298,
+          "participants": 223,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สธ-343",
+          "allocated_budget": 50500,
+          "disbursement": 45500,
+          "disbursement_percentage": 90.099,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D027",
+      "total_disbursement": 2901500,
+      "total_participants": 30396,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-735",
+          "allocated_budget": 129500,
+          "disbursement": 110500,
+          "disbursement_percentage": 85.3282,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-524",
+          "allocated_budget": 705500,
+          "disbursement": 504500,
+          "disbursement_percentage": 71.5096,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-111",
+          "allocated_budget": 757500,
+          "disbursement": 635000,
+          "disbursement_percentage": 83.8284,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-036",
+          "allocated_budget": 407500,
+          "disbursement": 315500,
+          "disbursement_percentage": 77.4233,
+          "participants": 193,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-503",
+          "allocated_budget": 563000,
+          "disbursement": 434500,
+          "disbursement_percentage": 77.1758,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-695",
+          "allocated_budget": 178000,
+          "disbursement": 113000,
+          "disbursement_percentage": 63.4831,
+          "participants": 9999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-789",
+          "allocated_budget": 284500,
+          "disbursement": 176500,
+          "disbursement_percentage": 62.0387,
+          "participants": 221,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D028",
+      "total_disbursement": 2012500,
+      "total_participants": 299995,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-757",
+          "allocated_budget": 372000,
+          "disbursement": 294500,
+          "disbursement_percentage": 79.1667,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-049",
+          "allocated_budget": 634000,
+          "disbursement": 411500,
+          "disbursement_percentage": 64.9054,
+          "participants": 209,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-331",
+          "allocated_budget": 593500,
+          "disbursement": 455000,
+          "disbursement_percentage": 76.6639,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-119",
+          "allocated_budget": 208500,
+          "disbursement": 139500,
+          "disbursement_percentage": 66.9089,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-340",
+          "allocated_budget": 390500,
+          "disbursement": 253500,
+          "disbursement_percentage": 64.9168,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-178",
+          "allocated_budget": 845000,
+          "disbursement": 758500,
+          "disbursement_percentage": 89.7633,
+          "participants": 177,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D029",
+      "total_disbursement": 2283000,
+      "total_participants": 843,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-387",
+          "allocated_budget": 670000,
+          "disbursement": 485000,
+          "disbursement_percentage": 72.3881,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-418",
+          "allocated_budget": 470000,
+          "disbursement": 273500,
+          "disbursement_percentage": 58.1915,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-533",
+          "allocated_budget": 367500,
+          "disbursement": 336500,
+          "disbursement_percentage": 91.5646,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-041",
+          "allocated_budget": 785500,
+          "disbursement": 564500,
+          "disbursement_percentage": 71.8652,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-475",
+          "allocated_budget": 384000,
+          "disbursement": 263000,
+          "disbursement_percentage": 68.4896,
+          "participants": 206,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-กษ-492",
+          "allocated_budget": 79000,
+          "disbursement": 72000,
+          "disbursement_percentage": 91.1392,
+          "participants": 168,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-896",
+          "allocated_budget": 408000,
+          "disbursement": 321000,
+          "disbursement_percentage": 78.6765,
+          "participants": -99,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D030",
+      "total_disbursement": 2513500,
+      "total_participants": 3000673,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-012",
+          "allocated_budget": 761000,
+          "disbursement": 636000,
+          "disbursement_percentage": 83.5742,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-175",
+          "allocated_budget": 141500,
+          "disbursement": 110000,
+          "disbursement_percentage": 77.7385,
+          "participants": 99,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-984",
+          "allocated_budget": 154500,
+          "disbursement": 105500,
+          "disbursement_percentage": 68.2848,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-817",
+          "allocated_budget": 155500,
+          "disbursement": 90500,
+          "disbursement_percentage": 58.1994,
+          "participants": 226,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-พช-669",
+          "allocated_budget": 609000,
+          "disbursement": 395000,
+          "disbursement_percentage": 64.8604,
+          "participants": 121,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-308",
+          "allocated_budget": 718000,
+          "disbursement": 666500,
+          "disbursement_percentage": 92.8273,
+          "participants": 999999,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D031",
+      "total_disbursement": 2682500,
+      "total_participants": 598,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สธ-927",
+          "allocated_budget": 744500,
+          "disbursement": 668000,
+          "disbursement_percentage": 89.718,
+          "participants": 182,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-218",
+          "allocated_budget": 495000,
+          "disbursement": 303500,
+          "disbursement_percentage": 61.3131,
+          "participants": 113,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ศษ-327",
+          "allocated_budget": 802000,
+          "disbursement": 582500,
+          "disbursement_percentage": 72.6247,
+          "participants": 158,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-ทถ-548",
+          "allocated_budget": 657500,
+          "disbursement": 452000,
+          "disbursement_percentage": 68.7452,
+          "participants": 53,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-904",
+          "allocated_budget": 606000,
+          "disbursement": 589000,
+          "disbursement_percentage": 97.1947,
+          "participants": 33,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2567-สค-289",
+          "allocated_budget": 40500,
+          "disbursement": 26000,
+          "disbursement_percentage": 64.1975,
+          "participants": 156,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D032",
+      "total_disbursement": 3031500,
+      "total_participants": 1024,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-207",
+          "allocated_budget": 779500,
+          "disbursement": 486000,
+          "disbursement_percentage": 62.3476,
+          "participants": 44,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-690",
+          "allocated_budget": 687500,
+          "disbursement": 450500,
+          "disbursement_percentage": 65.5273,
+          "participants": 245,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-976",
+          "allocated_budget": 730500,
+          "disbursement": 448500,
+          "disbursement_percentage": 61.3963,
+          "participants": 37,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-936",
+          "allocated_budget": 121500,
+          "disbursement": 113000,
+          "disbursement_percentage": 93.0041,
+          "participants": 165,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-821",
+          "allocated_budget": 63500,
+          "disbursement": 55000,
+          "disbursement_percentage": 86.6142,
+          "participants": 101,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-พช-670",
+          "allocated_budget": 698500,
+          "disbursement": 474500,
+          "disbursement_percentage": 67.9313,
+          "participants": 216,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-360",
+          "allocated_budget": 273000,
+          "disbursement": 152000,
+          "disbursement_percentage": 55.6777,
+          "participants": 231,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    },
+    {
+      "document_id": "D033",
+      "total_disbursement": 2274000,
+      "total_participants": 1129,
+      "activities": [
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-898",
+          "allocated_budget": 473500,
+          "disbursement": 291500,
+          "disbursement_percentage": 61.5628,
+          "participants": 121,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-052",
+          "allocated_budget": 214000,
+          "disbursement": 207500,
+          "disbursement_percentage": 96.9626,
+          "participants": 157,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ทถ-641",
+          "allocated_budget": 69000,
+          "disbursement": 39500,
+          "disbursement_percentage": 57.2464,
+          "participants": 212,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-121",
+          "allocated_budget": 333500,
+          "disbursement": 188500,
+          "disbursement_percentage": 56.5217,
+          "participants": 250,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-สค-698",
+          "allocated_budget": 426000,
+          "disbursement": 250500,
+          "disbursement_percentage": 58.8028,
+          "participants": 60,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-ศษ-406",
+          "allocated_budget": 454000,
+          "disbursement": 412000,
+          "disbursement_percentage": 90.7489,
+          "participants": 120,
+          "data_completeness": "ครบถ้วน"
+        },
+        {
+          "reason": "ดำเนินการแล้วเสร็จ",
+          "activity_id": "2568-กษ-375",
+          "allocated_budget": 707000,
+          "disbursement": 465000,
+          "disbursement_percentage": 65.7709,
+          "participants": 218,
+          "data_completeness": "ครบถ้วน"
+        }
+      ]
+    }
+  ]
+}
